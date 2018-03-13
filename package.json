@@ -1,0 +1,28 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "***\r A website for Louisville's local Morels Cafe, located at 619 Baxter Avenue. I tried to enhance [their current site](https://www.morelscafe.com/) by implementing more modern and decorative designs, warmer colors, customer review slides, and added user interaction through a sign up form and spoiler button.\r ***\r _HINTS_:\r + The navigation bar links across the top have been styled to collapse into a smaller navigation menu when the viewport is decreased. The text for the links as well as the text for the title change color if the user focuses on them.\r + Clicking on the 'HOME' link will return control to the top of the page and clicking on the 'MENU' link will move control of the page to the three featured menu items near the top, the 'ORDER NOW' link is unresponsive.\r + The spoiler button reveals an image of a weekly special menu item along with some playful text. Clicking on the text of the exposed menu item will lead the user to an instagram video.\r + The sign up form disables the submit button until all criteria for the form have been met.\r + The customer reviews have been styled to slide every 3 seconds. The user can force the slides to move quicker either by manually pressing the arrow keys on a keyboard or by swiping side to side on a touche-screen device.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrej523/FSJS-Project.git"
+  },
+  "author": "Andrej",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andrej523/FSJS-Project/issues"
+  },
+  "homepage": "https://github.com/andrej523/FSJS-Project#readme",
+  "dependencies": {
+    "angular": "^1.6.9",
+    "bcrypt": "^1.0.3",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "mongoose": "^5.0.10",
+    "nodemon": "^1.17.1",
+    "pug": "^2.0.1"
+  }
+}

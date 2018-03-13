@@ -1,12 +1,10 @@
 module.exports =
 {
-    appName: "Placeholder text goes here for now",
+    appName: "Morels Cafe",
     port: 3030,
     db:
     {
-        username: 'codedatabase',
-        password: 'Louisvilletechies6',
-        host: 'ds137149.mlab.com:37149',
-        dbName: 'testfornow'
+        host: 'localhost',
+        dbName: 'morels_menu'
     }
 }
