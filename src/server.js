@@ -1,4 +1,6 @@
-import { mongo } from 'mongoose';
+// loads to http://127.0.0.1:3030/index.html
+
+// import { mongo } from 'mongoose';
 
 // global scope
 "use strict"; // indicate that the code should be executed in "strict mode"
@@ -6,7 +8,7 @@ import { mongo } from 'mongoose';
 const path = require('path');
 const express = require('express'); // require the Express module
 const bodyParser = require('body-parser'); // require Node.js' body parsing middleware
-const cookieParser = require('cookie-parser'); // require Express.js' cookie parsing middleware
+// const cookieParser = require('cookie-parser'); // require Express.js' cookie parsing middleware
 const config = require('./config');
 const router = require('./routes');
 const session = require('express-session'); //  require Express.js' session middleware

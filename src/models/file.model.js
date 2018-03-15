@@ -1,6 +1,6 @@
 const mongoose = require('mongoose'); // require MongoDB object modeler for Node.js
 
-const FileSchema = new mongoose.Schema(
+const menuItemSchema = new mongoose.Schema(
 {
     title: String,
     description: String,
@@ -10,9 +10,9 @@ const FileSchema = new mongoose.Schema(
     }
 });
 
-const File = mongoose.model('File', FileSchema);
+const menuItem = mongoose.model('menuItem', menuItemSchema);
 
-File.count({}, (err, count) =>
+menuItem.count({}, (err, count) =>
 {
     if (err)
     {
@@ -21,9 +21,9 @@ File.count({}, (err, count) =>
 
     if (count > 0) return;
 
-    const files = require('./file.seed.json');
+    const menuItems = require('./menu_item.seed.json');
 
-    File.create(files, (err, newFiles) =>
+    menuItem.create(menuItems, (err, newMenuItems) =>
     {
         if (err)
         {
@@ -33,4 +33,4 @@ File.count({}, (err, count) =>
     });
 });
 
-module.exports = File;
+module.exports = menuItem;

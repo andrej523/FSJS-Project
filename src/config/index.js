@@ -4,7 +4,9 @@ module.exports =
     port: 3030,
     db:
     {
-        host: 'localhost',
-        dbName: 'morels_menu'
+        host: 'ds133547.mlab.com:33547',
+        dbName: 'morels_menu',
+        username: 'admin',
+        password: 'Ilovefood99'
     }
 }

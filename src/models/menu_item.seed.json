@@ -1,0 +1,21 @@
+[
+    {
+        "title": "southwest burger",
+        "description": "fiery",
+        "deleted": false
+    },
+
+    {
+        "title": "calzone",
+        "description": "melty",
+        "deleted": false
+    },
+
+    {
+        "title": "sorbet",
+        "description": "creamy",
+        "deleted": false
+    }
+]
+
+

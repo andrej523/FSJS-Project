@@ -1,11 +1,11 @@
-import { mongo } from 'mongoose';
+
 
 // global scope
 "use strict"; // indicate that the code should be executed in "strict mode"
 
 const bodyParser = require('body-parser'); // require Node.js' body parsing middleware
 const express = require('express'); // require the Express module
-const cookieParser = require('cookie-parser'); // require Express.js' cookie parsing middleware
+
 const session = require('express-session'); //  require Express.js' session middleware
 const mongoose = require('mongoose'); // require MongoDB object modeler for Node.js
 
@@ -21,7 +21,8 @@ app.use(session(
     saveUninitialized: false // force a session that is uninitialized to be saved to the store
 }));
 
-mongoose.connect('mongodb://localhost:27017/exampledatabase');
+
+mongoose.connect('mongodb://mongo:mongo@ds137149.mlab.com:37149/testfornow');
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, "connection error:"));
 
