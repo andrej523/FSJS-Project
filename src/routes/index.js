@@ -1,4 +1,3 @@
-// src/routes/index.js
 const router = require('express').Router();
 const mongoose = require('mongoose');
 
@@ -9,17 +8,19 @@ router.use('/doc', function(req, res, next) {
 /**
  * Get a list of all files in the DB
  */
-router.get('/file', function(req, res, next) {
-  const fileModel = mongoose.model('File');
+router.get('/file', function(req, res, next)
+{
+    const fileModel = mongoose.model('menuItem');
 
-  fileModel.find({}, function(err, files) {
+    fileModel.find({}, function(err, files)
+    {
     if (err) {
-      console.log(err);
-      return res.status(500).json(err);
+        console.log(err);
+        return res.status(500).json(err);
     }
-  
+
     res.json(files);
-  });
+    });
 });
 
 /**
@@ -41,7 +42,7 @@ router.get('/file/:fileId', function(req, res, next) {
  * Create a new file
  */
 router.post('/file', function(req, res, next) {
-  const File = mongoose.model('File');
+  const File = mongoose.model('menuItem');
   const fileData = {
     title: req.body.title,
     description: req.body.description,
@@ -61,7 +62,7 @@ router.post('/file', function(req, res, next) {
  * Update an existing file
  */
 router.put('/file/:fileId', function(req, res, next) {
-  const File = mongoose.model('File');
+  const File = mongoose.model('menuItem');
   const fileId = req.params.fileId;
   
   File.findById(fileId, function(err, file) {
@@ -87,11 +88,22 @@ router.put('/file/:fileId', function(req, res, next) {
   })
   });
 
+
+
+
+
+
+
+
+
+
 /**
  * Delete a file
  */
 router.delete('/file/:fileId', function(req, res, next) {
   res.end(`Deleting file '${req.params.fileId}'`);
+  
+  
 });
 
 module.exports = router;
