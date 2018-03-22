@@ -7,6 +7,11 @@ const menuItemSchema = new mongoose.Schema(
     created_at:
     {
         type: Date, default: Date.now
+    },
+    deleted:
+    {
+        type: Boolean,
+        default: false
     }
 });
 
