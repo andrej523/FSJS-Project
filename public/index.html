@@ -153,6 +153,41 @@
             </div> <!-- /slider -->         
         </div> <!-- /flex-container -->
         </section><!-- /testimonials --><br><br><br>
+
+        <div id='list-container'></div>
+        <button id='add-file-button' class='btn btn-primary' onclick='handleAddFileClick()'>Submit Menu Suggestion</button>
+        <div id='form-container' class="panel hidden">
+            <form id='add-file-form'>
+            <div class='form-group'>
+                <label for='file-title'>Title</label>
+                <input type='text' class='form-control' id='file-title' placeholder='Title'>
+                <input type='hidden' id='file-id'>
+            </div>
+            <div class='form-group'>
+                <label for='file-description'>Description</label>
+                <input type='text' class='form-control' id='file-description' placeholder='Description'>
+            </div>
+            <button type='button' onclick='submitFileForm()' class="btn btn-success">Submit</button>
+            <button type='button' onclick='cancelFileForm()' class="btn btn-link">cancel</button>
+            </form>
+        </div>
+        </div>
+        <br>
+        <script id='list-template' type='text/x-handlebars-template'>
+            <ul class='list-group'>
+                {{#each files}}
+                <li class='list-group-item'>
+                    <strong>{{title}}</strong> - {{description}}
+                    <span class="pull-right">
+                        <button type="button" class="btn btn-xs btn-default" onclick="handleEditFileClick('{{_id}}')">Edit</button>
+                        <!-- Make a "Delete" button appear by each file, just next to the "Edit" button. Open public/index.html and add this just after the edit button -->
+                        <button type="button" class="btn btn-xs btn-danger" onclick="handleDeleteFileClick('{{_id}}')">Delete</button>
+                    </span>
+                </li>
+                {{/each}}
+            </ul>
+        </script>
+        <br>
         <footer>
             <div class='container' id='contact-container'>
                 <div class='row'>
@@ -245,40 +280,6 @@
         <div id='copyright' class='closing-grid'>
             <p>&copy; 2017 Andrej Cucilovic of Code Louisville. All Rights Reserved.</p>
         </div><!-- /copyright -->
-
-        <div id='list-container'></div>
-        <button id='add-file-button' class='btn btn-primary' onclick='handleAddFileClick()'>Add File</button>
-        <div id='form-container' class="panel hidden">
-            <form id='add-file-form'>
-            <div class='form-group'>
-                <label for='file-title'>Title</label>
-                <input type='text' class='form-control' id='file-title' placeholder='Title'>
-            </div>
-            <div class='form-group'>
-                <label for='file-description'>Description</label>
-                <input type='text' class='form-control' id='file-description' placeholder='Description'>
-            </div>
-            <button type='button' onclick='submitFileForm()' class="btn btn-success">Submit</button>
-            <button type='button' onclick='cancelFileForm()' class="btn btn-link">cancel</button>
-            </form>
-        </div>
-        </div>
-
-        <script id='list-template' type='text/x-handlebars-template'>
-            <ul class='list-group'>
-                {{#each files}}
-                <li class='list-group-item'>
-                    <strong>{{title}}</strong> - {{description}}
-                    <span class="pull-right">
-                        <button type="button" class="btn btn-xs btn-default" onclick="handleEditFileClick('{{_id}}')">Edit</button>
-                        <!-- Make a "Delete" button appear by each file, just next to the "Edit" button. Open public/index.html and add this just after the edit button -->
-                        <button type="button" class="btn btn-xs btn-danger" onclick="handleDeleteFileClick('{{_id}}')">Delete</button>
-                    </span>
-                </li>
-                {{/each}}
-            </ul>
-        </script>
-        
         <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js'></script>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.8/handlebars.min.js'></script>
         <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
