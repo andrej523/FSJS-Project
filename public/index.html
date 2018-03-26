@@ -153,7 +153,7 @@
             </div> <!-- /slider -->         
         </div> <!-- /flex-container -->
         </section><!-- /testimonials --><br><br><br>
-
+        <h2 id='menu_suggestion'>Test</h2>
         <div id='list-container'></div>
         <button id='add-file-button' class='btn btn-primary' onclick='handleAddFileClick()'>Submit Menu Suggestion</button>
         <div id='form-container' class="panel hidden">
@@ -179,9 +179,9 @@
                 <li class='list-group-item'>
                     <strong>{{title}}</strong> - {{description}}
                     <span class="pull-right">
-                        <button type="button" class="btn btn-xs btn-default" onclick="handleEditFileClick('{{_id}}')">Edit</button>
+                        <button type='button' class="btn btn-xs btn-default" onclick="handleEditFileClick('{{_id}}')">Edit</button>
                         <!-- Make a "Delete" button appear by each file, just next to the "Edit" button. Open public/index.html and add this just after the edit button -->
-                        <button type="button" class="btn btn-xs btn-danger" onclick="handleDeleteFileClick('{{_id}}')">Delete</button>
+                        <button type='button' class="btn btn-xs btn-danger" onclick="handleDeleteFileClick('{{_id}}')">Delete</button>
                     </span>
                 </li>
                 {{/each}}

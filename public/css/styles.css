@@ -745,3 +745,9 @@ tfoot td
     text-shadow: 3px 3px 5px #faf3bc;
     width: fill;
 }/*----- break -----*/
+/*---------- Menu Suggestion Styles ----------*/
+#menu_suggestion
+{
+    align-content: center;
+    color: red;
+}
