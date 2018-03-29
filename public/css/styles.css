@@ -748,6 +748,9 @@ tfoot td
 /*---------- Menu Suggestion Styles ----------*/
 #menu_suggestion
 {
-    align-content: center;
-    color: red;
+    text-align: center;
+    background: #dfa182;
+    border-top: 8px solid #c44c69;
+    font-size: 23px;
+    padding: 7px 0px;
 }
